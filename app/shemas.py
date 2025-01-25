@@ -1,23 +1,29 @@
-from pydantic import BaseModel
+# -*- coding: utf-8 -*-
+from fastapi import APIRouter
+
+user = APIRouter(prefix="/user", tags=["user"])
 
 
-class CreateUser(BaseModel):
-    username: str
-    firstname: str
-    lastname: str
-    age: int
+@user.get("/")
+async def all_users():
+    pass
 
-class UpdateUser(BaseModel):
-    firstname: str
-    lastname: str
-    age: int
 
-class CreateTask(BaseModel):
-    title: str
-    content: str
-    priority: int
+@user.get("/user_id")
+async def user_by_id():
+    pass
 
-class UpdateTask(BaseModel):
-    title: str
-    content: str
-    priority: int
+
+@user.post("/create")
+async def create_user():
+    pass
+
+
+@user.put("/update")
+async def update_user():
+    pass
+
+
+@user.delete("/delete")
+async def delete_user():
+    pass
