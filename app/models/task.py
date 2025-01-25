@@ -4,7 +4,6 @@ from sqlalchemy.orm import relationship
 from app.models.user import User
 from sqlalchemy.schema import CreateTable
 
-
 class Task(Base):
     __tablename__ = 'tasks'
     __table_args__ = {'keep_existing': True}
